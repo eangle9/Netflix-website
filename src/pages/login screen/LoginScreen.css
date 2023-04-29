@@ -18,9 +18,10 @@
     top: 20px;
     padding: 10px 20px;
     color: white;
-    background-color: #e50914;
+    background-color: var(--color-e50914);
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 .loginScreen__gradient{
     width: 100%;
@@ -33,4 +34,49 @@
         rgba(0, 0, 0, 0) 60%,
         rgba(0, 0, 0, 0.8) 100%
     );
+}
+.loginScreen__body{
+    position: absolute;
+    top: 30%;
+    color:#fff;
+    z-index: 1;
+    text-align: center;
+    margin-left: 50%;
+    margin-right: auto;
+    transform: translate(-50%, 0 );
+    padding: 20px;
+    width: 60%;
+   
+}
+.loginScreen__body>h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.loginScreen__body>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.loginScreen__body>h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.loginScreen__input>form>input{
+    padding: 10px;
+    height: 30px;
+    width: 30%;
+    border: none;
+    outline-width: 0;
+    max-width: 600px;
+}
+.loginScreen__getStarted{
+    padding: 16px 20px;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    background-color:var(--color-e50914);
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: uppercase;
 }
