@@ -34,13 +34,15 @@
 }
 .signInScreen__passShow{
     position: absolute;
-    top: 45%;
+    top: 49%;
     left: 75%;
     z-index: 1;
     color: #111;
+    cursor: pointer;
 }
 .singInScreen__button{
     margin-top: 30px;
+    margin-bottom: 3px;
     width: 100%;
     padding: 15px 0px;
     color: var(--color-fff);

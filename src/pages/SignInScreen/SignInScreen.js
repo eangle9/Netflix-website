@@ -18,7 +18,7 @@ const SignInScreen = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user);
-                Navigate("/");
+                Navigate("/profile");
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -38,7 +38,7 @@ const SignInScreen = () => {
                     <form>
                         <div className="signInScreen__input">
                             <input onChange={e => setEmail(e.target.value)} value={email} type="email" placeholder="Email Address" />
-                            <input onChange={e => setPassword(e.target.value)} value={password} type={show?"text":"password"} placeholder="password" />
+                            <input onChange={e => setPassword(e.target.value)} value={password} type={show?"text":"password"} placeholder="Password" />
                         </div>
                         <div className="signInScreen__passShow" onClick={() => setShow(preState => !preState)} >
                             {show ?

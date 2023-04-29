@@ -49,16 +49,16 @@
    
 }
 .loginScreen__body>h1{
-    font-size: 3.125rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 .loginScreen__body>h2{
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 400;
     margin-bottom: 20px;
 }
 .loginScreen__body>h3{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 20px;
 }

@@ -10,13 +10,14 @@ import LoginScreen from './pages/login screen/LoginScreen';
 import SignUpScreen from './pages/signUpScreen/SignUpScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from "./firebase";
+import ProfileScreen from './pages/Profile Screen/ProfileScreen';
 
 
 
 
 
 function App() {
-  const user = null;
+  const user = true;
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -41,6 +42,10 @@ function App() {
     {
       path: "/signUp",
       element: <SignUpScreen />
+    },
+    {
+      path: "/profile",
+      element: <ProfileScreen/>
     }
   ]);
 

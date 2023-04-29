@@ -39,7 +39,7 @@ const SignUpScreen = () => {
                         <form>
                             <div className="signInScreen__input">
                                 <input onChange={e => setEmail(e.target.value)} value={email} type="email" placeholder="Email Address" />
-                                <input onChange={e => setPassword(e.target.value)} value={password} type={passShow?"text":"password"} placeholder="password" />
+                                <input onChange={e => setPassword(e.target.value)} value={password} type={passShow?"text":"password"} placeholder="Password" />
                             </div>
                             <div className="signUpScreen__passShow" onClick={()=>setPassShow(preState=>!preState)}>
                                 {passShow?<AiFillEye style={{fontSize:"22px"}} />:<AiFillEyeInvisible style={{fontSize:"22px"}} />}

@@ -1,6 +1,7 @@
 .signUpScreen__passShow{
     position: absolute;
-    top: 52%;
+    top: 51%;
     left: 75%;
     color: #111;
+    cursor: pointer;
 }
