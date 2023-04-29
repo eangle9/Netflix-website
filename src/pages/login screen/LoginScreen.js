@@ -7,8 +7,7 @@ const LoginScreen = () => {
     return (
         <>
             <div className="loginScreen">
-            <div className="loginScreen__gradient" />
-
+                <div className="loginScreen__gradient" />
                 {signIn ? (
                     <SignInScreen />
                 ) : (
@@ -23,7 +22,7 @@ const LoginScreen = () => {
                                 className="loginScreen__button">
                                 Sign In
                             </button>
-                            
+
                         </div>
                         <div className="loginScreen__body">
                             <h1>Unlimited films, TV programmes and more.</h1>

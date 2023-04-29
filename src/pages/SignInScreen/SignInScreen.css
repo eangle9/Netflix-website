@@ -24,12 +24,20 @@
     gap: 15px;
 }
 .signInScreen__input>input{
+    /* position: relative  ; */
     padding: 10px 15px;
     height: 30px;
     border: none;
     outline-width: 0;
     border-radius: 4px;
     font-size: 14px;
+}
+.signInScreen__passShow{
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    z-index: 1;
+    color: #111;
 }
 .singInScreen__button{
     margin-top: 30px;

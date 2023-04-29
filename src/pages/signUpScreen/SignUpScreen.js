@@ -3,10 +3,12 @@ import "./SignUpScreen.css";
 import { auth } from "../../firebase";
 import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 import  { useNavigate } from "react-router-dom";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"
 
 const SignUpScreen = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [ passShow, setPassShow] = useState(false);
     const Navigate = useNavigate();
 
     const Register = async (e) => {
@@ -37,7 +39,10 @@ const SignUpScreen = () => {
                         <form>
                             <div className="signInScreen__input">
                                 <input onChange={e => setEmail(e.target.value)} value={email} type="email" placeholder="Email Address" />
-                                <input onChange={e => setPassword(e.target.value)} value={password} type="password" placeholder="password" />
+                                <input onChange={e => setPassword(e.target.value)} value={password} type={passShow?"text":"password"} placeholder="password" />
+                            </div>
+                            <div className="signUpScreen__passShow" onClick={()=>setPassShow(preState=>!preState)}>
+                                {passShow?<AiFillEye style={{fontSize:"22px"}} />:<AiFillEyeInvisible style={{fontSize:"22px"}} />}
                             </div>
                             <button onClick={ Register } type="submit" className="singInScreen__button">Sign Up</button>
                         </form>

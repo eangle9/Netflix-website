@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { auth } from "../../firebase";
-import {  signInWithEmailAndPassword  } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import "./SignInScreen.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 
 const SignInScreen = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [show, setShow] = useState(false);
     const Navigate = useNavigate();
 
     const SignIn = async (e) => {
@@ -24,11 +25,11 @@ const SignInScreen = () => {
                 alert(errorMessage, errorCode);
                 console.log(errorCode, errorMessage);
             });
-            setEmail('');
-            setPassword('');
+        setEmail('');
+        setPassword('');
 
     }
-   
+
     return (
         <>
             <div className="signInScreen">
@@ -37,12 +38,19 @@ const SignInScreen = () => {
                     <form>
                         <div className="signInScreen__input">
                             <input onChange={e => setEmail(e.target.value)} value={email} type="email" placeholder="Email Address" />
-                            <input onChange={e => setPassword(e.target.value)} value={password} type="password" placeholder="password" />
+                            <input onChange={e => setPassword(e.target.value)} value={password} type={show?"text":"password"} placeholder="password" />
+                        </div>
+                        <div className="signInScreen__passShow" onClick={() => setShow(preState => !preState)} >
+                            {show ?
+                                (<AiFillEye style={{fontSize:"22px"}} />)
+                                :
+                                (<AiFillEyeInvisible style={{fontSize:"22px"}} />)
+                            }
                         </div>
                         <button onClick={SignIn} type="submit" className="singInScreen__button">Sign In</button>
                         <div className="signUp__link">
                             <p>No account yet?</p>
-                            <Link to="/signUp" /* onClick={Register} */>Sign up now.</Link>
+                            <Link to="/signUp" >Sign up now.</Link>
                         </div>
                     </form>
                 </div>
